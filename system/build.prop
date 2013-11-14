@@ -44,6 +44,20 @@ rild.libargs=-d /dev/smd0
 telephony.lteOnGsmDevice=1
 ro.telephony.default_network=9
 
+#ACID TWEAKS
+debug.composition.type=cpu
+video.accelerate.hw=1
+persist.sys.use_dithering=0
+persist.sys.ui.hw=1
+windowsmgr.max_events_per_sec=300
+dalvik.vm.dexopt-data-only=1
+dalvik.vm.dexopt-flags=m=v,o=y
+dalvik.gc.type=precise
+debug.gr.swapinterval=0
+enforce_process_limit=false
+max_processes=false
+ro.config.hw_power_saving=true
+
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
@@ -55,8 +69,8 @@ ro.config.alarm_alert=Alarm_Classic.ogg
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 wifi.interface=wlan0
 ro.chipname=apq8064
-ro.ril.hsxpa=1
-ro.ril.gprsclass=10
+ro.ril.hsxpa=3
+ro.ril.gprsclass=12
 persist.radio.add_power_save=1
 persist.radio.snapshot_disabled=1
 persist.radio.use_se_table_only=1
@@ -135,6 +149,5 @@ ro.goo.version=1384315700
 ro.config.ringtone=Orion.ogg
 persist.sys.dalvik.vm.lib=libdvm.so
 dalvik.vm.lockprof.threshold=500
-dalvik.vm.dexopt-flags=m=y
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
